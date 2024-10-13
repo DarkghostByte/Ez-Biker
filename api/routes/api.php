@@ -18,4 +18,10 @@ Route::resource('pedidos', PedidosController::class);
 
 Route::get('/factura',[PedidosController::class,'generarPDF']);
 
+Route::get('/verCategorias',[ProductsController::class,'verCategorias']);
+
+Route::get('/totalProducts', [ProductsController::class, 'totalProducts']);
+
+
+
 

@@ -78,9 +78,9 @@
           <span class="block text-gray-500 lblText">Servicios hechos</span>
         </div>
       </div>
-      <div class="flex flex-col md:col-span-2 md:row-span-3 bg-white shadow rounded-lg">
+      <div class="flex flex-col md:col-span-3 md:row-span-2 bg-white shadow rounded-lg">
         <div class="px-6 py-5 font-semibold border-b border-gray-100">Notas importantes:</div>
-        <div class="p-4 flex-grow overflow-y-auto" style="max-height: 24rem;">
+        <div class="p-4 flex-grow overflow-y-auto" style="max-height: 14rem;">
           <ul class="p-6 space-y-6">
             <li class="flex items-center">
               <span class="text-gray-600 long-text">Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
@@ -118,6 +118,7 @@
         </div>
       </div>
 
+      <!--     
       <div class="row-span-3 bg-white shadow rounded-lg">
         <div class="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
           <span>Empleados</span>
@@ -176,7 +177,10 @@
           </ul>
               
         </div>
+        
       </div>
+       -->
+
     </section>
     
     <!-- END FILE -->
@@ -211,13 +215,13 @@
   background-color:rgba(255, 94, 0, 0.75);
 }
 .long-text {
-  width: 400px;
+  width: 700px;
   word-wrap: break-word;
 }
 
 @media (min-width: 768px) {
   .long-text {
-    width: 400px; /* Ancho fijo para pantallas más grandes */
+    width: 700px; /* Ancho fijo para pantallas más grandes */
   }
 }
 </style>

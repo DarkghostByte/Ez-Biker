@@ -13,17 +13,17 @@ class CategorysSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('categorys')->insert([
-            'category'=>'Categoria1',
+        DB::table('categorias')->insert([
+            'categoria'=>'Aceites',
         ]);
-        DB::table('categorys')->insert([
-            'category'=>'Categoria2',
+        DB::table('categorias')->insert([
+            'categoria'=>'Bujias',
         ]);
-        DB::table('categorys')->insert([
-            'category'=>'Categoria3',
+        DB::table('categorias')->insert([
+            'categoria'=>'Filtro de aires',
         ]);
-        DB::table('categorys')->insert([
-            'category'=>'Categoria4',
+        DB::table('categorias')->insert([
+            'categoria'=>'Lubricantes de cadenas',
         ]);
     }
 }

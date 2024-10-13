@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Categoria;
 use Validator;
 
 class ProductsController extends Controller
@@ -13,10 +14,17 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $data = Product::all();
+        $data = Product::select([
+            'products.*',
+            'categorias.categoria'
+        ])
+        ->join('categorias', 'products.id_categoria', '=', 'categorias.id')
+        ->orderBy('products.id', 'ASC')
+        ->get();
+
         return response()->json([
-            'status'=>'success',
-            'data'=>$data
+            'status' => 'success',
+            'data' => $data
         ]);
     }
 
@@ -35,11 +43,12 @@ class ProductsController extends Controller
     {
         
         $reglas = Validator::make($request->all(),[
-            'name' => 'required|min:3',
-            'price' => 'required|numeric',
-            'id_category' => 'required',
-            'img' => 'required',
-            'description' => 'required|min:3',
+            'trademark' => 'required|min:3',
+            'nameProduct' => 'required|min:3',
+            'priceProduct' => 'required|numeric',
+            'id_categoria' => 'required',
+            'imgProduct' => 'required',
+            'descriptionProduct' => 'required|min:3'
         ]);
         if( $reglas -> fails()){
             return response()->json([
@@ -49,11 +58,12 @@ class ProductsController extends Controller
             ],201);
         }else{
             $data = new Product();
-            $data->name = $request->name;
-            $data->price = $request->price;
-            $data->img = $request->img;
-            $data->id_category= $request->id_category;
-            $data->description=$request->description;
+            $data->trademark = $request->trademark;
+            $data->nameProduct = $request->nameProduct;
+            $data->priceProduct = $request->priceProduct;
+            $data->imgProduct = $request->imgProduct;
+            $data->id_categoria= $request->id_categoria;
+            $data->descriptionProduct=$request->descriptionProduct;
             $data->save();
 
             return response()->json([
@@ -88,7 +98,34 @@ class ProductsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = Product::find($id);
+        $reglas = Validator::make($request->all(), [
+            'trademark' => 'required|min:3',
+            'nameProduct' => 'required|min:3',
+            'priceProduct' => 'required|numeric',
+            'id_categoria' => 'required',
+            'descriptionProduct' => 'required|min:3'
+        ]);
+        if (!$data) {
+            return response()->json([
+                'status' => 'failed',
+                'message' => 'Producto no encontrado'
+            ], 404);
+        }
+        if ($reglas->fails()) {
+            return response()->json([
+                'status' => 'failed',
+                'message' => 'Error de validación',
+                'errors' => $reglas->errors()
+            ], 400);
+        }
+        $data->fill($request->all());
+        $data->save();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Producto actualizado correctamente',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -96,7 +133,18 @@ class ProductsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = Product::find($id);
+        if($data != null){
+            $data -> delete();
+        } return response()->json([
+            'status'=>'success'
+        ]);
+    }
+
+    public function totalProductosExt()
+    {
+        $totalProducts = Product::count();
+        return response()->json(['total' => $totalProducts]);
     }
 
     public function upload(Request $request){
@@ -110,4 +158,10 @@ class ProductsController extends Controller
         return response()->json(['error' => 'No se propocionó ningun archivo'],
         400);
     }
+
+    public function verCategorias()
+        {
+            $categorias = Categoria::all();
+            return response()->json($categorias);
+        }
 }
