@@ -6,14 +6,19 @@
         <h2 class="text-gray-100 ml-0.5">Panel de control EZ-Biker</h2>
       </div>
       <div class="flex flex-wrap items-start justify-end -mb-3">
-        <button class="inline-flex px-5 py-3 text-gray-300 hover:text-gray-700 focus:text-gray-700 hover:bg-gray-300 focus:bg-gray-300 border border-gray-300 rounded-md mb-3">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 h-5 w-5 -ml-1 mt-0.5 mr-2">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+        <button
+          class="inline-flex px-5 py-3 text-gray-300 hover:text-gray-700 focus:text-gray-700 hover:bg-gray-300 focus:bg-gray-300 border border-gray-300 rounded-md mb-3">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="flex-shrink-0 h-5 w-5 -ml-1 mt-0.5 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
           </svg>
           Editar Notas
         </button>
-        <button class="inline-flex px-5 py-3 text-white bg-orange-600 hover:bg-orange-700 focus:bg-orange-700 rounded-md ml-6 mb-3">
-          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 h-6 w-6 text-white -ml-1 mr-2">
+        <button
+          class="inline-flex px-5 py-3 text-white bg-orange-600 hover:bg-orange-700 focus:bg-orange-700 rounded-md ml-6 mb-3">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="flex-shrink-0 h-6 w-6 text-white -ml-1 mr-2">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
           </svg>
           Crear Nueva Nota
@@ -22,7 +27,8 @@
     </div>
     <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 py-3">
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
-        <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-orange-600 bg-orange-200 rounded-full mr-6">
+        <div
+          class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-orange-600 bg-orange-200 rounded-full mr-6">
           <span class="material-symbols-outlined iconHome">motorcycle</span>
         </div>
         <div>
@@ -31,16 +37,18 @@
         </div>
       </div>
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
-        <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-200 rounded-full mr-6">
+        <div
+          class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-200 rounded-full mr-6">
           <span class="material-symbols-outlined iconHome">service_toolbox</span>
         </div>
         <div>
-          <span class="block text-2xl font-bold lblNum">6.8</span>
+          <span class="block text-2xl font-bold lblNum">{{ totalProducts }}</span>
           <span class="block text-gray-500 lblText">Productos</span>
         </div>
       </div>
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
-        <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-red-600 bg-red-200 rounded-full mr-6">
+        <div
+          class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-red-600 bg-red-200 rounded-full mr-6">
           <span class="material-symbols-outlined iconHome">sports_motorsports</span>
         </div>
         <div>
@@ -49,7 +57,8 @@
         </div>
       </div>
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
-        <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-yellow-600 bg-yellow-200 rounded-full mr-6">
+        <div
+          class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-yellow-600 bg-yellow-200 rounded-full mr-6">
           <span class="material-symbols-outlined iconHome">description</span>
         </div>
         <div>
@@ -57,11 +66,12 @@
           <span class="block text-gray-500 lblText">Notas creadas</span>
         </div>
       </div>
-      
+
     </section>
     <section class="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6">
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
-        <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-teal-600 bg-teal-200 rounded-full mr-6">
+        <div
+          class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-teal-600 bg-teal-200 rounded-full mr-6">
           <span class="material-symbols-outlined iconHome">build</span>
         </div>
         <div>
@@ -70,7 +80,8 @@
         </div>
       </div>
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
-        <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-green-600 bg-green-200 rounded-full mr-6">
+        <div
+          class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-green-600 bg-green-200 rounded-full mr-6">
           <span class="material-symbols-outlined iconHome">home_repair_service</span>
         </div>
         <div>
@@ -83,7 +94,8 @@
         <div class="p-4 flex-grow overflow-y-auto" style="max-height: 14rem;">
           <ul class="p-6 space-y-6">
             <li class="flex items-center">
-              <span class="text-gray-600 long-text">Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+              <span
+                class="text-gray-600 long-text">Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
               <span class="px-3 ml-auto font-semibold">00/00/0000</span>
             </li>
             <li class="flex items-center">
@@ -182,38 +194,61 @@
        -->
 
     </section>
-    
+
     <!-- END FILE -->
   </div>
- 
+
 
 </template>
 
 <script>
-   
-    export default {
-        name:'AdminHomeComponent',
-        data() {
+import axios from 'axios';
+export default {
+  name: 'AdminHomeComponent',
+  data() {
     return {
       url: process.env.VUE_APP_ROOT_ASSETS,
+      urlApi: process.env.VUE_APP_ROOT_API,
+      totalProducts: 0,
     };
   },
-    }
+  mounted() {
+    this.refresh(),
+      this.fetchData();
+  },
+  methods: {
+    refresh() {
+      this.tableData = []
+    },
+    async fetchData() {
+      try {
+        const responseTotalProducts = await axios.get(this.urlApi + 'totalProducts');
+        this.totalProducts = responseTotalProducts.data.total;
+      } catch (error) {
+        console.error('Error al obtener los datos:', error);
+      }
+    },
+  }
+}
 </script>
 
 <style>
-.lblNum{
-  color:black;
+.lblNum {
+  color: black;
 }
-.lblText{
-  color:rgb(0 0 0 0.50);
+
+.lblText {
+  color: rgb(0 0 0 0.50);
 }
-.iconHome{
-  color:black;
+
+.iconHome {
+  color: black;
 }
-.iconHomeColor{
-  background-color:rgba(255, 94, 0, 0.75);
+
+.iconHomeColor {
+  background-color: rgba(255, 94, 0, 0.75);
 }
+
 .long-text {
   width: 700px;
   word-wrap: break-word;
@@ -221,7 +256,8 @@
 
 @media (min-width: 768px) {
   .long-text {
-    width: 700px; /* Ancho fijo para pantallas más grandes */
+    width: 700px;
+    /* Ancho fijo para pantallas más grandes */
   }
 }
 </style>

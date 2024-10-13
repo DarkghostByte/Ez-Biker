@@ -141,7 +141,7 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function totalProductosExt()
+    public function totalProducts()
     {
         $totalProducts = Product::count();
         return response()->json(['total' => $totalProducts]);
